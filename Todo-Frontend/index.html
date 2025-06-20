@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-title">
+                <h1>Todo List</h1>
+            </div>
+            <div class="user-profile" id="userProfile">
+                <!-- User profile circle will be added here by JavaScript -->
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="add-task-container">
+            <button class="voice-btn">Add Task By Voice</button>
+            <div class="task-input-area">
+                <div class="task-info">
+                    <p><strong>Operation:</strong><span id="operation"></span></p>
+                    <p><strong>Task:</strong><span id="task"></span></p>
+                    <p><strong>Urgency:</strong><span id="urgency"></span></p>
+                    <p><strong>DateTime:</strong><span id="datetime"></span></p>
+                </div>
+                <div id="confirmation-area"></div>
+            </div>
+            <div class = "filter-section"></div> <!-- This div is for the filtering section -->
+        </section>
+        <section class="tasks-list-container">
+            <h2>Your Tasks</h2>
+            <div id="todo-list" class="tasks-grid">
+                <!-- Tasks will be populated here by JavaScript -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Todo List. All rights reserved.</p>
+    </footer>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="OpenAI.js"></script>
+    <script type="module" src="constants.js"></script>
+</body>
+</html>

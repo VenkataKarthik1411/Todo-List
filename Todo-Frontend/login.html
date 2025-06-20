@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Login & Registration Form</title>
+  <link rel="stylesheet" type="text/css" href="login.css">
+  <!-- Add FontAwesome for the eye icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="form-wrapper sign-in">
+      <form action="">
+        <h2>Login</h2>
+        <div class="input-group">
+          <input type="email" name="email" required>
+          <label for="">Email</label>
+        </div>
+        <div class="input-group">
+          <input type="password" name="password" required>
+          <label for="">Password</label>
+        </div>
+        <div class="remember">
+          <label><input type="checkbox"> Remember me</label>
+        </div>
+        <button type="submit">Login</button>
+        <div class="signUp-link">
+          <p>Don't have an account? <a href="#" class="signUpBtn-link">Sign Up</a></p>
+        </div>
+        <div class="google-signin">
+          <div id="g_id_signin_login" class="g_id_signin"
+               data-type="standard"
+               data-shape="rectangular"
+               data-theme="outline"
+               data-text="signin_with"
+               data-size="large"
+               data-logo_alignment="left">
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    <div class="form-wrapper sign-up">
+      <form action="">
+        <h2>Sign Up</h2>
+        <div class="input-group">
+          <input type="tel" name="phonenumber" required pattern="[0-9]{10}">
+          <label for="">Phone Number</label>
+        </div>
+        <div class="input-group">
+          <input type="email" name="email" required>
+          <label for="">Email</label>
+        </div>
+        <div class="input-group">
+          <input type="password" name="password" required>
+          <label for="">Password</label>
+        </div>
+        <div class="remember">
+          <label><input type="checkbox"> I agree to the terms & conditions</label>
+        </div>
+        <button type="submit">Sign Up</button>
+        <div class="signUp-link">
+          <p>Already have an account? <a href="#" class="signInBtn-link">Sign In</a></p>
+        </div>
+        <div class="google-signup">
+          <div id="g_id_signin_signup" class="g_id_signin"
+               data-type="standard"
+               data-shape="rectangular"
+               data-theme="outline"
+               data-text="signup_with"
+               data-size="large"
+               data-logo_alignment="left">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Google Sign-In configuration -->
+  <div id="g_id_onload"
+       data-client_id="753342194804-dq979uo88caihvhnivsk3pbdgcfike1h.apps.googleusercontent.com"
+       data-context="signin"
+       data-ux_mode="popup"
+       data-callback="handleGoogleCredentialResponse"
+       data-auto_prompt="false">
+  </div>
+
+  <div id="errorMessage" class="error-message"></div>
+    
+  <script type = "module" src="login.js"></script>
+  <script type = "module" src="Google.js"></script>
+  <script type = "module" src="constants.js"></script>
+</body>
+</html>

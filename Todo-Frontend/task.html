@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-title">
+                <h1>Todo List</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="add-task-container">
+            <form id="task-update-form">
+                    <div class="form-group">
+                        <label for="update-operation">Operation:</label>
+                        <input type="text" id="update-operation" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="update-task">Task:</label>
+                        <input type="text" id="update-task"  required>
+                    </div>
+                    <div class="form-group">
+                        <label for="update-urgency">Urgency:</label>
+                        <select id="update-urgency" required>
+                            <option value="High" >High</option>
+                            <option value="Medium" >Medium</option>
+                            <option value="Low" >Low</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="update-datetime">Date & Time:</label>
+                        <input type="datetime-local" id="update-datetime"  required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="save-btn">Save Changes</button>
+                        <button type="button" class="cancel-btn" id="cancel-update">Cancel</button>
+                    </div>
+                </form>
+            <div class = "filter-section"></div> <!-- This div is for the filtering section -->
+        </section>
+        <section class="tasks-list-container">
+            <h2>Your Tasks</h2>
+            <div id="todo-list" class="tasks-grid">
+                <!-- Tasks will be populated here by JavaScript -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Todo List. All rights reserved.</p>
+    </footer>
+    <!-- <script type="module" src="script.js"></script>
+    <script type="module" src="OpenAI.js"></script>
+    <script type="module" src="constants.js"></script> -->
+</body>
+</html>
